@@ -81,6 +81,9 @@ test:
 #
 production:
   <<: *default
-  database: semfest_cafe_production
-  username: semfest_cafe
-  password: <%= ENV["SEMFEST_CAFE_DATABASE_PASSWORD"] %>
+  database: <%= ENV["PGDATABASE"] %>
+  host: <%= ENV["PGHOST"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
+  port: <%= ENV["PGPORT"] %>
+  url: <%= ENV["DATABASE_URL"] %>
