@@ -37,22 +37,22 @@
   justify-content: center;
   align-items: center;
 
-  &.my-yellow {
+  &.text-warning {
     background: palegoldenrod !important;
     color: black !important;
   }
 
-  &.my-blue {
+  &.text-blue {
     background: #76aff8 !important;
     color: black !important;
   }
 
-  &.my-red {
+  &.text-danger {
     background: #e65c7d !important;
     color: black !important;
   }
 
-  &.my-green {
+  &.text-success {
     background: #37f194 !important;
     color: black !important;
   }
