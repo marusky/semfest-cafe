@@ -9,7 +9,7 @@
         = form.label :color_green, 'Zelená', class: 'btn btn-outline-success rounded-pill'
       .d-flex.justify-content-center
         = form.radio_button :color, :blue, class: 'btn-check'
-        = form.label :color_blue, 'Modrá', class: 'btn btn-outline-primary rounded-pill'
+        = form.label :color_blue, 'Modrá', class: 'btn btn-outline-blue rounded-pill'
       .d-flex.justify-content-center
         = form.radio_button :color, :yellow, class: 'btn-check'
         = form.label :color_yellow, 'Žltá', class: 'btn btn-outline-warning rounded-pill'
@@ -24,4 +24,4 @@
       .text-danger-emphasis.text-center.mb-5.mt-2
         = @order.errors.full_messages_for(:base).first
     .d-flex.justify-content-center.pt-4
-      = form.submit 'Vytvoriť', class: 'btn btn-info rounded-pill px-5 btn-lg'
+      = form.submit 'Vytvoriť', class: 'btn btn-success rounded-pill px-5 btn-lg'

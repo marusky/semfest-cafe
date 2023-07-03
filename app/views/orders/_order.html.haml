@@ -4,7 +4,7 @@
   %td
     - if order.preparing?
       = link_to ready_order_path(order), data: { turbo_method: :post } do
-        .btn.btn-primary.rounded-pill.px-3 Pripravená!
+        .btn.btn-orange.rounded-pill.px-3 Pripravená!
     - elsif order.ready?
       = link_to deliver_order_path(order), data: { turbo_method: :post } do
         .btn.btn-success.rounded-pill.px-3 Odovzdaná.

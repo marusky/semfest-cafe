@@ -1,13 +1,13 @@
 = turbo_stream_from :orders
 
-.container
-  .row
-    .col-6.fs-1.text-center.text-danger-emphasis Pripravujeme...
-    .col-6.fs-1.text-center.text-success-emphasis Hotovo!
-  .row
-    #orders-in-preparation.col-6.fs-2
+.mx-5
+  .row.justify-content-between
+    .col-5.enlarge.text-white Pripravujeme...
+    .col-5.enlarge.text-white Hotovo!
+  .row.justify-content-between
+    #orders-in-preparation.col-5.fs-2
       - @orders_in_preparation.each do |order|
         = render partial: 'orders/number', locals: { order: order }
-    #orders-ready.col-6.fs-2
+    #orders-ready.col-5.fs-2
       - @orders_ready.each do |order|
         = render partial: 'orders/number', locals: { order: order }

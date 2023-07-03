@@ -9,3 +9,6 @@ application.register("alert-close", AlertCloseController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import NumberController from "./number_controller"
+application.register("number", NumberController)

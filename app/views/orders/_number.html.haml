@@ -1,1 +1,3 @@
-%span{ id: dom_id(order, :public), class: order.bootstrap_text_color }= order.number
+- first_time ||= false
+
+%span.enlarge{ id: dom_id(order, :public), class: order.bootstrap_text_color, data: { controller: first_time ? 'number' : '' } }= order.number

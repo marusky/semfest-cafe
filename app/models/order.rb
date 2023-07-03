@@ -22,13 +22,13 @@ class Order < ApplicationRecord
   def bootstrap_text_color
     case color
     when 'red'
-      'text-danger'
+      'my-red'
     when 'green'
-      'text-success'
+      'my-green'
     when 'blue'
-      'text-primary'
+      'my-blue'
     when 'yellow'
-      'text-warning'
+      'my-yellow'
     end
   end
 

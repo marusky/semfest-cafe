@@ -1,0 +1,60 @@
+.dragon {
+  background: red !important;
+  width: 100px;
+  height: 100px;
+}
+
+.my-blue {
+  color: #76aff8 !important;
+}
+
+.my-red {
+  color: #e65c7d !important;
+}
+
+.my-green {
+  color: #37f194 !important;
+}
+
+.my-yellow {
+  color: palegoldenrod !important;
+}
+
+.enlarge {
+  font-size: 5em;
+  margin: 30px;
+}
+
+.first-show-number {
+  font-size: 20em;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.my-yellow {
+    background: palegoldenrod !important;
+    color: black !important;
+  }
+
+  &.my-blue {
+    background: #76aff8 !important;
+    color: black !important;
+  }
+
+  &.my-red {
+    background: #e65c7d !important;
+    color: black !important;
+  }
+
+  &.my-green {
+    background: #37f194 !important;
+    color: black !important;
+  }
+}
+

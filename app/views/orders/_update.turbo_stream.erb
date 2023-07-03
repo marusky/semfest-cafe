@@ -1,7 +1,7 @@
 <% if order.ready? %>
   <%= turbo_stream.replace "order_#{order.id}", partial: "orders/order", locals: { order: order } %>
   <%= turbo_stream.remove "public_order_#{order.id}" %>
-  <%= turbo_stream.append "orders-ready", partial: "orders/number", locals: { order: order } %>
+  <%= turbo_stream.append "orders-ready", partial: "orders/number", locals: { order: order, first_time: true } %>
 <% else %>
   <%= turbo_stream.remove "order_#{order.id}" %>
   <%= turbo_stream.remove "public_order_#{order.id}" %>
