@@ -20,6 +20,16 @@ class OrdersController < ApplicationController
     end
   end
 
+  def destroy
+    @order = Order.find(params[:id])
+
+    if @order.delivered? && @order.delete
+      head :ok
+    else
+      head :unprocessable_entity
+    end
+  end
+
   def ready
     puts "READY"
     @order = Order.find(params[:id])
