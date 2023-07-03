@@ -1,3 +1,15 @@
+$primary: #6315ec;
+$success: #20c997;
+
+$theme-colors: (
+        "primary": $primary,
+        "success": $success,
+        "orange": #e3a058,
+        "warning": #e7f163,
+        "danger": #ed5679,
+        "blue": #3e9ef4
+);
+
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'application';
