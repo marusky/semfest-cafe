@@ -9,5 +9,9 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
   %body
+    - if content_for? :back
+      .fixed-top.fs-1.px-5.pt-3.text-white.bg-body.d-flex.justify-content-between
+        = content_for :back
+    .pt-5
+      = yield
     #alerts.fixed-bottom.d-flex.flex-column
-    = yield

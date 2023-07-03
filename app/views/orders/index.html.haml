@@ -1,5 +1,12 @@
 = turbo_stream_from :orders
 
+- content_for :back do
+  = link_to root_path, class: 'link-secondary' do
+    %i.bi.bi-arrow-left
+    = link_to new_order_path do
+      .btn.btn-primary.rounded-pill
+        Nová objednávka
+
 .container.mt-3
   %table.table
     %thead

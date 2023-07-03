@@ -1,3 +1,10 @@
+- content_for :back do
+  = link_to root_path, class: 'link-secondary' do
+    %i.bi.bi-arrow-left
+    = link_to orders_path do
+      .btn.btn-primary.rounded-pill
+        Všetky objednávky
+
 .container.position-absolute.top-50.start-50.translate-middle
   %h1.text-center.mb-5.pb-5
     Nová objednávka

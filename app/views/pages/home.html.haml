@@ -1,0 +1,8 @@
+.container.position-absolute.top-50.start-50.translate-middle.d-flex.align-items-center.flex-column
+  = link_to new_order_path do
+    .btn.btn-success.rounded-pill.btn-lg.px-5.mb-4
+      Nová objednávka
+  = link_to orders_path do
+    .btn.btn-primary.rounded-pill.btn-lg.px-5.mb-4
+      Všetky objednávky
+  = link_to 'Objednávky (obrazovka)', public_path, class: 'link-primary'
