@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     end
   end
 
+
   get '/public', to: 'orders#public_index'
+  get '/spotlight', to: 'pages#spotlight'
+  post 'spotlight', to: 'orders#spotlight'
 
   root "pages#home"
 end

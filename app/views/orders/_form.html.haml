@@ -1,5 +1,8 @@
+- submit_text ||= 'Vytvoriť'
+- form_path ||= orders_path
+
 #orders-form
-  = form_with model: order do |form|
+  = form_with model: order, url: form_path do |form|
     .d-flex.justify-content-center.gap-3.mb-4
       .d-flex.justify-content-center
         = form.radio_button :color, :red, class: 'btn-check visually-hidden'
@@ -24,4 +27,4 @@
       .text-danger-emphasis.text-center.mb-5.mt-2
         = @order.errors.full_messages_for(:base).first
     .d-flex.justify-content-center.pt-4
-      = form.submit 'Vytvoriť', class: 'btn btn-success rounded-pill px-5 btn-lg'
+      = form.submit submit_text, class: 'btn btn-success rounded-pill px-5 btn-lg'

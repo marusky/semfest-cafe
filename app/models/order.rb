@@ -19,6 +19,10 @@ class Order < ApplicationRecord
     yellow: 'yellow'
   }
 
+  def spotlight
+    broadcast_update_to :orders, partial: 'orders/number', target: 'spotlight', locals: { order: self, controller: 'spotlight' }
+  end
+
   def bootstrap_text_color
     case color
     when 'red'

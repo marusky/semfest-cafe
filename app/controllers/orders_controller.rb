@@ -43,6 +43,11 @@ class OrdersController < ApplicationController
     end
   end
 
+  def spotlight
+    order = Order.new(number: order_params[:number], color: order_params[:color])
+    order.spotlight
+  end
+
   private
 
   def order_params

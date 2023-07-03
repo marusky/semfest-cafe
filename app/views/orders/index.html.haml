@@ -3,9 +3,11 @@
 - content_for :back do
   = link_to root_path, class: 'link-secondary' do
     %i.bi.bi-arrow-left
-    = link_to new_order_path do
-      .btn.btn-success.rounded-pill.px-3
-        Nová objednávka
+  = link_to spotlight_path, class: 'link-secondary' do
+    %i.bi.bi-broadcast
+  = link_to new_order_path do
+    .btn.btn-success.rounded-pill.px-3
+      Nová objednávka
 
 .container.mt-3
   %table.table

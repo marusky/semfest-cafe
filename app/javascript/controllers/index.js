@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import NumberController from "./number_controller"
 application.register("number", NumberController)
+
+import SpotlightController from "./spotlight_controller"
+application.register("spotlight", SpotlightController)
