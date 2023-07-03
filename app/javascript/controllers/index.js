@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import AlertCloseController from "./alert_close_controller"
+application.register("alert-close", AlertCloseController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

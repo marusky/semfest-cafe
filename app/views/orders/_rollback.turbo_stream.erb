@@ -1,0 +1,10 @@
+<%= turbo_stream.remove "alert_#{order.id}" %>
+
+<% if order.ready? %>
+  <%= turbo_stream.append 'orders-ready', partial: 'orders/number', locals: { order: order } %>
+  <%= turbo_stream.append 'orders', partial: "orders/order", locals: { order: order } %>
+<% else %>
+  <%= turbo_stream.replace "order_#{order.id}", partial: 'orders/order', locals: { order: order } %>
+  <%= turbo_stream.remove "public_order_#{order.id}" %>
+  <%= turbo_stream.append 'orders-in-preparation', partial: 'orders/number', locals: { order: order } %>
+<% end %>

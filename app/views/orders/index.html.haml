@@ -1,0 +1,11 @@
+= turbo_stream_from :orders
+
+.container.mt-3
+  %table.table
+    %thead
+      %tr
+        %th #
+        %th Stav
+        %th Akcia
+    %tbody#orders
+      = render @orders

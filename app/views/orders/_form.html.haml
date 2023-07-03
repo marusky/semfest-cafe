@@ -1,0 +1,27 @@
+#orders-form
+  = form_with model: order do |form|
+    .d-flex.justify-content-center.gap-3.mb-4
+      .d-flex.justify-content-center
+        = form.radio_button :color, :red, class: 'btn-check visually-hidden'
+        = form.label :color_red, 'Červená', class: 'btn btn-outline-danger rounded-pill'
+      .d-flex.justify-content-center
+        = form.radio_button :color, :green, class: 'btn-check'
+        = form.label :color_green, 'Zelená', class: 'btn btn-outline-success rounded-pill'
+      .d-flex.justify-content-center
+        = form.radio_button :color, :blue, class: 'btn-check'
+        = form.label :color_blue, 'Modrá', class: 'btn btn-outline-primary rounded-pill'
+      .d-flex.justify-content-center
+        = form.radio_button :color, :yellow, class: 'btn-check'
+        = form.label :color_yellow, 'Žltá', class: 'btn btn-outline-warning rounded-pill'
+    - if @order.errors.include?(:color)
+      .text-danger-emphasis.text-center.mb-2
+        Zabudol si vybrať farbu?
+    = form.number_field :number, id: 'order-number', placeholder: 'Číslo objednávky', class: "form-control form-control-lg text-center rounded-pill #{@order.errors.include?(:number) || @order.errors.include?(:base) ? 'is-invalid' : 'mb-5'}"
+    - if @order.errors.include?(:number)
+      .text-danger-emphasis.text-center.mb-5.mt-2
+        Číslo objenávky musí byť vyplnené.
+    - elsif @order.errors.include?(:base)
+      .text-danger-emphasis.text-center.mb-5.mt-2
+        = @order.errors.full_messages_for(:base).first
+    .d-flex.justify-content-center.pt-4
+      = form.submit 'Vytvoriť', class: 'btn btn-info rounded-pill px-5 btn-lg'

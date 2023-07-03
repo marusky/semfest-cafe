@@ -1,0 +1,8 @@
+- type ||= 'warning'
+
+.alert.alert-dismissible.fade.show.mx-3.mb-3.rounded-pill.px-4{ id: "alert_#{order.id}", class: "alert-#{type.to_s}"}
+  = order.action_message_in_words
+  - if type == 'warning'
+    = link_to rollback_order_path(order), data: { turbo_method: :post } do
+      %strong Chyba?
+  %button.btn-close{ data: { bs_dismiss: "alert", controller: 'alert-close' } }

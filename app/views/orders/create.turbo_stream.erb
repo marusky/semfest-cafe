@@ -1,0 +1,6 @@
+<% if @order.errors.present? %>
+  <%= turbo_stream.replace 'orders-form', partial: 'orders/form', locals: { order: @order } %>
+<% else %>
+  <%= turbo_stream.replace 'orders-form', partial: 'orders/form', locals: { order: @new_order } %>
+  <%= turbo_stream.append "alerts", partial: 'orders/alert', locals: { order: @order, type: 'success' } %>
+<% end %>
