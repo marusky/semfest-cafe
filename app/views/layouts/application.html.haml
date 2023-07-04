@@ -4,10 +4,13 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Semfest Café
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %meta{ name: 'apple-mobile-web-app-capable', content: 'yes' }
+    %link{ rel: 'apple-touch-icon', href: image_url('icon2.png') }
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = favicon_link_tag asset_path('icon.png')
   %body
     - if content_for? :back
       .fixed-top.fs-1.px-5.pt-3.text-white.bg-body.d-flex.justify-content-between
