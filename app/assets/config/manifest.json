@@ -1,11 +1,11 @@
 {
-  "background_color": "white",
-  "description": "Your description",
+  "background_color": "#212529",
+  "description": "Simple app for cafés & stuff.",
   "display": "standalone",
-  "name": "Your title",
-  "short_name": "Your short name",
+  "name": "Semfest Café",
+  "short_name": "Semfest Café",
   "start_url": "/",
   "scope": "/",
-  "lang": "en",
-  "theme_color": "white"
+  "lang": "sk",
+  "theme_color": "#212529"
 }
