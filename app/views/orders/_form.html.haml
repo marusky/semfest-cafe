@@ -3,7 +3,7 @@
 
 #orders-form
   = form_with model: order, url: form_path do |form|
-    .d-flex.justify-content-center.gap-3.mb-4
+    .d-flex.justify-content-center.gap-3.mb-3
       .d-flex.justify-content-center
         = form.radio_button :color, :red, class: 'btn-check visually-hidden'
         = form.label :color_red, 'Červená', class: 'btn btn-outline-danger rounded-pill'
@@ -16,6 +16,16 @@
       .d-flex.justify-content-center
         = form.radio_button :color, :yellow, class: 'btn-check'
         = form.label :color_yellow, 'Žltá', class: 'btn btn-outline-warning rounded-pill'
+    .d-flex.justify-content-center.gap-3.mb-4
+      .d-flex.justify-content-center
+        = form.radio_button :color, :pink, class: 'btn-check'
+        = form.label :color_pink, 'Ružová', class: 'btn btn-outline-pink rounded-pill'
+      .d-flex.justify-content-center
+        = form.radio_button :color, :purple, class: 'btn-check'
+        = form.label :color_purple, 'Fialová', class: 'btn btn-outline-purple rounded-pill'
+      .d-flex.justify-content-center
+        = form.radio_button :color, :orange, class: 'btn-check'
+        = form.label :color_orange, 'Oranžová', class: 'btn btn-outline-orange rounded-pill'
     - if @order.errors.include?(:color)
       .text-danger-emphasis.text-center.mb-2
         Zabudol si vybrať farbu?

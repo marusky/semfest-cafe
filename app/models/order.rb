@@ -16,7 +16,10 @@ class Order < ApplicationRecord
     red: 'red',
     green: 'green',
     blue: 'blue',
-    yellow: 'yellow'
+    yellow: 'yellow',
+    pink: 'pink',
+    purple: 'purple',
+    orange: 'orange'
   }
 
   def spotlight
@@ -33,6 +36,12 @@ class Order < ApplicationRecord
       'text-blue'
     when 'yellow'
       'text-warning'
+    when 'pink'
+      'text-pink'
+    when 'purple'
+      'text-purple'
+    when 'orange'
+      'text-orange'
     end
   end
 
@@ -92,6 +101,12 @@ class Order < ApplicationRecord
       'žltá'
     when 'green'
       'zelená'
+    when 'pink'
+      'ružová'
+    when 'purple'
+      'fialová'
+    when 'orange'
+      'oranžová'
     end
   end
 end
