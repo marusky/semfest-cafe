@@ -9,13 +9,16 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = Order.new
+    @order = Order.new(number: session[:number], color: session[:color])
   end
 
   def create
     @order = Order.new(order_params.merge({ progress: :preparing }))
 
     if @order.save
+      session[:number] = @order.number + 1
+      session[:color] = @order.color
+
       @new_order = Order.new(number: @order.number + 1, color: @order.color)
     end
   end
