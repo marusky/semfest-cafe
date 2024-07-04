@@ -14,5 +14,3 @@
     #orders-ready.col-5.fs-2
       - @orders_ready.each do |order|
         = render partial: 'orders/number', locals: { order: order }
-
-= image_tag 'bckg.jpg', style: 'width: 100%; height: 100%; position: fixed; top:0; z-index: -10; opacity: 70%;'
