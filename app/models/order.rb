@@ -6,13 +6,13 @@ class Order < ApplicationRecord
   after_update_commit -> { broadcast_render_to :orders, partial: 'orders/update'}, if: :correct_flow?
   after_update_commit -> { broadcast_render_to :orders, partial: 'orders/rollback'}, if: :incorrect_flow?
 
-  enum progress: {
+  enum :progress, {
     preparing: 'preparing',
     ready: 'ready',
     delivered: 'delivered'
   }
 
-  enum color: {
+  enum :color, {
     red: 'red',
     green: 'green',
     blue: 'blue',
